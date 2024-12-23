@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Pendaftaran Turnamen Free Fire</title>
+
+  <!-- Meta Tags for SEO -->
+  <meta name="description" content="Ikuti turnamen Free Fire online terpercaya di FastTournament by BILxDZYL. Raih kekompakan dan jadilah yang terbaik bersama tim Anda!">
+  <meta name="keywords" content="Turnamen Free Fire, BILxDZYL, turnamen FF online, turnamen game, Free Fire esports, FF kompetisi, FastTournament">
+  <meta name="author" content="BILxDZYL">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="FastTournament - Turnamen Free Fire Online">
+  <meta property="og:description" content="Bergabunglah di FastTournament by BILxDZYL, turnamen Free Fire yang aman, terpercaya, dan penuh tantangan. Daftarkan tim Anda sekarang!">
+  <meta property="og:image" content="https://tourbilzxdonzy.web.id/assets/images/head.jpg">
+  <meta property="og:url" content="https://tourbilzxdonzy.web.id/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="id_ID">
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="FastTournament - Turnamen Free Fire Online">
+  <meta name="twitter:description" content="Bergabunglah di FastTournament by BILxDZYL, turnamen Free Fire yang aman, terpercaya, dan penuh tantangan. Daftarkan tim Anda sekarang!">
+  <meta name="twitter:image" content="https://tourbilzxdonzy.web.id/assets/images/head.jpg">
+  <meta name="twitter:creator" content="@BILxDZYL">
+
+  <!-- Additional Meta Tags -->
+  <link rel="canonical" href="https://tourbilzxdonzy.web.id/">
+  <meta name="robots" content="index, follow">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="/src/assets/backend-setting.css"  rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+</head>
+<body class="bg-gray-900 flex items-center justify-center min-h-screen relative">
+
+  <video class="background-video" autoplay muted loop>
+    <source src="public/background-video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+
+  <!-- Tombol Toggle Dark Mode -->
+  <button id="theme-toggle" class="absolute top-4 right-4 p-3 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 text-white focus:outline-none">
+    <i id="theme-icon" class="fas fa-moon"></i>
+  </button>
+  
+  <!-- Form Container -->
+  <div class="bg-white bg-opacity-90 shadow-lg rounded-2xl p-8 max-w-lg w-full relative">
+    <!-- Badge -->
+    <div class="absolute -top-4 -right-4  bg-gradient-to-r from-purple-500 to-blue-500 text-white px-4 py-1 text-sm rounded-full shadow-lg">
+      Turnamen FF
+    </div>
+
+    <!-- Gambar -->
+    <div class="mb-6">
+      <img src="public/head.jpg" alt="Banner Turnamen" class="rounded-lg shadow-md w-full aspect-square object-cover">
+    </div>
+
+    <!-- Judul -->
+    <div class="relative mb-8">
+      <h2 class="text-4xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-blue-400 to-blue-200 animate-text">
+        Pendaftaran Turnamen Free Fire
+      </h2>
+      <div class="absolute left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-purple-600 via-blue-400 to-blue-200 mt-4"></div>
+    </div>
+
+    <form id="registration-form" onsubmit="return handleFormSubmit(event)">
+
+      <!-- Nama Kapten/Perwakilan -->
+      <div class="mb-6">
+        <label for="captain-name" class="block text-sm font-semibold text-purple-700 mb-2">Nama Kapten/Perwakilan</label>
+        <input 
+          type="text" 
+          id="captain-name" 
+          name="captain-name" 
+          placeholder="Masukkan nama kapten" 
+          class="block w-full rounded-lg border-gray-300 shadow-md focus:border-purple-500 focus:ring focus:ring-purple-300 focus:outline-none py-3 px-4" 
+          required>
+      </div>
+
+      <!-- Nama Tim -->
+      <div class="mb-6">
+        <label for="team-name" class="block text-sm font-semibold text-purple-700 mb-2">Nama Tim</label>
+        <input 
+          type="text" 
+          id="team-name" 
+          name="team-name" 
+          placeholder="Masukkan nama tim" 
+          class="block w-full rounded-lg border-gray-300 shadow-md focus:border-purple-500 focus:ring focus:ring-purple-300 focus:outline-none py-3 px-4" 
+          required>
+      </div>
+
+      <!-- Jadwal Sesi -->
+      <div class="mb-6">
+        <label for="session-time" class="block text-sm font-semibold text-purple-700 mb-2">Jadwal Sesi</label>
+        <select 
+          id="session-time" 
+          name="session-time" 
+          class="block w-full rounded-lg border-gray-300 shadow-md focus:border-purple-500 focus:ring focus:ring-purple-300 focus:outline-none py-3 px-4" 
+          required>
+            <option disabled selected>Pilih sesi</option>
+            <option value="sesi-1" data-time="13:00">Sesi 1 - 13.00</option>
+            <option value="sesi-2" data-time="14:00">Sesi 2 - 14.00</option>
+            <option value="sesi-3" data-time="15:00">Sesi 3 - 15.00</option>
+            <option value="sesi-4" data-time="16:00">Sesi 4 - 16.00</option>
+            <option value="sesi-5" data-time="17:00">Sesi 5 - 17.00</option>
+            <option value="sesi-6" data-time="19:00">Sesi 6 - 19.00</option>
+            <option value="sesi-7" data-time="20:00">Sesi 7 - 20.00</option>
+            <option value="sesi-8" data-time="21:00">Sesi 8 - 21.00</option>
+            <option value="sesi-9" data-time="22:00">Sesi 9 - 22.00</option>
+            <option value="sesi-10" data-time="23:00">Sesi 10 - 23.00</option>
+            <option value="sesi-11" data-time="00:00">Sesi 11 - 00.00</option>
+        </select>
+      </div>
+
+      <!-- Pilihan Booking -->
+      <div class="mb-6">
+        <label class="block text-sm font-semibold text-purple-700 mb-2">Pilih Tipe Booking</label>
+        <div class="flex items-center gap-4">
+          <label class="flex items-center">
+            <input 
+              type="radio" 
+              name="booking-type" 
+              value="Booking" 
+              class="w-4 h-4 text-purple-600 border-gray-300 focus:ring-purple-500" 
+              required>
+            <span class="ml-2 text-sm text-gray-700">Booking</span>
+          </label>
+          <label class="flex items-center">
+            <input 
+              type="radio" 
+              name="booking-type" 
+              value="Tidak Booking" 
+              class="w-4 h-4 text-purple-600 border-gray-300 focus:ring-purple-500">
+            <span class="ml-2 text-sm text-gray-700">Tidak Booking</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="overlay" id="error-overlay">
+      <h1>404 Code</h1>
+      <p>Akses ini tidak diizinkan,Silakan kembali.</p>
+      <button onclick="window.location.reload()">Kembali</button>
+      </div>
+
+      <script>
+      document.addEventListener('contextmenu', function (e) {
+        e.preventDefault();
+        showOverlay();
+      });
+
+      document.addEventListener('keydown', function (e) {
+        // Prevent F12
+        if (e.key === 'F12') {
+          e.preventDefault();
+          showOverlay();
+        }
+        // Prevent Ctrl+Shift+I, Ctrl+Shift+J, and Ctrl+U
+        if ((e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J')) || 
+            (e.ctrlKey && e.key === 'u')) {
+          e.preventDefault();
+          showOverlay();
+        }
+      });
+
+      // Function to show the 404 overlay
+      function showOverlay() {
+        const overlay = document.getElementById('error-overlay');
+        overlay.style.display = 'flex';
+      }
+      </script>
+
+
+       <!-- Metode Pembayaran -->
+        <div class="mb-8">
+          <label for="payment" class="block text-sm font-semibold text-gray-700 mb-2">Metode Pembayaran</label>
+          <select id="payment" name="paymentMethod" class="block w-full rounded-lg border-gray-300 shadow-md focus:border-blue-500 focus:ring focus:ring-blue-300 focus:outline-none py-3 px-4" onchange="updatePaymentInfo()">
+            <option disabled selected>Pilih metode pembayaran</option>
+            <option value="gopay">GoPay</option>
+            <option value="dana">DANA</option>
+            <option value="ovo">OVO</option>
+            <option value="qris">QRIS</option>
+          </select>
+
+          <div id="payment-info" class="hidden mt-4">
+            <div id="payment-details"></div>
+          </div>
+        </div>
+
+        <!-- Tombol Kirim -->
+        <div class="mb-6 text-center">
+          <button type="submit" class="w-full bg-gradient-to-r from-purple-500 to-blue-500 text-white font-semibold py-3 px-4 rounded-lg shadow-md hover:from-purple-600 hover:to-blue-600 transition-colors">Daftar Sekarang</button>
+        </div>
+      </form>
+      </div>
+  <div>
+</div>
+  
+<script src="src/assets/pay.js"></script>
+<script src="src/assets/booking.js"></script>
+<script src="src/assets/darkmode.js"></script>
+<body>
+<html>

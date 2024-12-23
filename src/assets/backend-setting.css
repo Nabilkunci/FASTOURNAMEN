@@ -1,0 +1,179 @@
+ /* Overlay Styling */
+  .overlay {
+    display: none; /* Default hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Simple semi-transparent background */
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    animation: fadeIn 0.5s ease-in-out; /* Smooth fade-in animation */
+  }
+
+  .overlay h1 {
+    font-size: 3rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .overlay p {
+    font-size: 1.2rem;
+    color: #cccccc;
+    text-align: center;
+    max-width: 80%;
+    margin-bottom: 1.5rem;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .overlay button {
+    background: #6c5ce7; /* Clean, solid purple */
+    color: #ffffff;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+
+  .overlay button:hover {
+    background: #5a3fbd;
+  }
+
+  .overlay button:active {
+    background: #4c37a8;
+  }
+
+  /* Keyframes for fade-in effect */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+ /* Dark Mode Styles */
+  .dark {
+    background-color: #121212;
+    color: #eaeaea;
+  }
+
+  .dark .bg-white {
+    background-color: #333;
+  }
+
+  .dark .bg-gray-900 {
+    background-color: #181818;
+  }
+
+  .dark .text-gray-700 {
+    color: #f0f0f0;
+  }
+
+/* Background Video */
+.background-video {
+  position: fixed; /* Pastikan video berada di posisi tetap */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Agar video menyesuaikan ukuran layar */
+  z-index: -1; /* Tetap di belakang elemen lainnya */
+  pointer-events: none; /* Tidak mengganggu interaksi pengguna */
+}
+
+/* Content Styling */
+.content {
+  position: relative; /* Tetap di atas video */
+  z-index: 1;
+  color: white;
+  text-align: center;
+  padding-top: 20%; /* Atur jarak teks dari atas */
+}
+
+/* Mode Gelap */
+.dark .bg-gray-900 {
+  background-color: rgba(24, 24, 24, 0.8); /* Warna semi-transparan */
+}
+
+.dark .background-video {
+  display: block; /* Pastikan video tetap terlihat */
+}
+
+
+ /* Custom scrollbar untuk browser yang mendukung */
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, #2575fc, #6a11cb);
+  }
+
+  /* Firefox Scrollbar (eksperimental) */
+  body {
+    scrollbar-width: thin;
+    scrollbar-color: #6a11cb #f1f1f1;
+  }
+
+@keyframes shimmer {
+  0% {
+    background-position: -100%;
+  }
+  100% {
+    background-position: 200%;
+  }
+}
+
+.animate-text {
+  background-size: 200% auto;
+  animation: shimmer 3s linear infinite;
+}
+
+/* Mode Gelap */
+.dark .bg-gray-900 {
+  background-color: #181818;
+}
+
+/* Styling untuk <select> */
+.dark select {
+  background-color: #333;
+  color: #f0f0f0;
+  border-color: #444;
+}
+
+/* Menyesuaikan fokus dan efek hover */
+.dark select:focus {
+  border-color: #a3a3a3; /* Warna border saat fokus */
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.3); /* Efek fokus */
+}
+
+/* Styling untuk label dalam mode gelap */
+.dark .text-purple-700 {
+  color: #d1b2ff; /* Ubah warna teks label menjadi ungu muda */
+}
+
+/* Agar tombol select tidak terlalu terang dalam mode gelap */
+.dark .py-3 {
+  background-color: #333;
+  border-color: #444;
+}
+
