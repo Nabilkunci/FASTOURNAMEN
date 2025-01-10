@@ -11,7 +11,7 @@ function updatePaymentInfo() {
   if (payment === 'qris') {
     paymentDetails.innerHTML = `
       <strong>QRIS:</strong> 
-      <img src="path/to/qris-code.png" alt="Kode QRIS" class="mt-2">
+      <img src="public/qris-code.jpg" alt="Kode QRIS" class="mt-2">
       <p class="text-sm text-gray-600 mt-2">Silakan scan QRIS menggunakan aplikasi pembayaran Anda.</p>
     `;
   } else if (['gopay', 'dana', 'ovo'].includes(payment)) {
